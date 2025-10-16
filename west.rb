@@ -5,21 +5,21 @@
 class West < Formula
   desc "Global mesh networking for distributed datacenters. Includes DNS + DHCP, built on Nebula. Connect together AWS, GCP, Azure, and any custom provider including your homelab."
   homepage "https://github.com/sprisa/west"
-  version "0.0.3"
+  version "0.0.4"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sprisa/west/releases/download/v0.0.3/west_Darwin_x86_64.tar.gz"
-      sha256 "24907b549ac43b988207cd302c169d4e2345aa534dbc1ffbb11cfc0494d5b493"
+      url "https://github.com/sprisa/west/releases/download/v0.0.4/west_Darwin_x86_64.tar.gz"
+      sha256 "f69c38073f1a7bd8b65ce1bcc9f159f00d5d8c63fc37ecaa57f7228c6433db4e"
 
       def install
         bin.install "west"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sprisa/west/releases/download/v0.0.3/west_Darwin_arm64.tar.gz"
-      sha256 "ed7f15f0b226f681491f8ebefdbe8c6e3961bd082e0abecb5ff5ff7d6c2017f5"
+      url "https://github.com/sprisa/west/releases/download/v0.0.4/west_Darwin_arm64.tar.gz"
+      sha256 "a022fea34ed4ad3678c6233b3d313e61d556e87f765edbf75d031d71d8d1e0cd"
 
       def install
         bin.install "west"
@@ -29,15 +29,15 @@ class West < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/west/releases/download/v0.0.3/west_Linux_x86_64.tar.gz"
-      sha256 "8d1dc63781968020046c467e9b2e1ca0dd811cc851ed22a122e702cb447274ca"
+      url "https://github.com/sprisa/west/releases/download/v0.0.4/west_Linux_x86_64.tar.gz"
+      sha256 "6e34a0b946bbcffc2edb3992905c6ae335ea35dab785c40c1375887d05d88991"
       def install
         bin.install "west"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/west/releases/download/v0.0.3/west_Linux_arm64.tar.gz"
-      sha256 "58bce76fab1ef3153721c4045a6a4f25bab47a4ddb1164ee10963e2bc885ff29"
+      url "https://github.com/sprisa/west/releases/download/v0.0.4/west_Linux_arm64.tar.gz"
+      sha256 "6dbde81fa0db3aadd283ddead2344b24e3b67185eda65172211a716c73e6ab55"
       def install
         bin.install "west"
       end
