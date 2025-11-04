@@ -5,21 +5,21 @@
 class Localhost < Formula
   desc "Local development certs (TLS) for https services on localhost"
   homepage "https://svc.host"
-  version "0.0.2"
+  version "0.0.5"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.2/localhost_Darwin_x86_64.tar.gz"
-      sha256 "29c856f32ee5ae6bde7db8cdae4de402a2e12fdae26ac073489fe0ad1c7024b9"
+      url "https://github.com/sprisa/localhost/releases/download/v0.0.5/localhost_Darwin_x86_64.tar.gz"
+      sha256 "fb183ec14f886ea08cab653131bf7b2d1d5d14145d964b66acfceec9a2d4de81"
 
       def install
         bin.install "localhost"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.2/localhost_Darwin_arm64.tar.gz"
-      sha256 "e4a7b95b665021e868838744a671ee429fb21b041766f512651cc2babe63369f"
+      url "https://github.com/sprisa/localhost/releases/download/v0.0.5/localhost_Darwin_arm64.tar.gz"
+      sha256 "35042b30c6b8fca169c268b0fb45fe0f7d871dc3e7a691eba846510f361308d5"
 
       def install
         bin.install "localhost"
@@ -28,16 +28,16 @@ class Localhost < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.2/localhost_Linux_x86_64.tar.gz"
-      sha256 "cf03747f6ec113f9ee5aa96ca246c93ea28a8f19d88f33c077875421555418ed"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sprisa/localhost/releases/download/v0.0.5/localhost_Linux_x86_64.tar.gz"
+      sha256 "cf8679cfb28ded2a71da3e934d6818c3d6845c445326f89a3d9e87c933fc34a2"
       def install
         bin.install "localhost"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.2/localhost_Linux_arm64.tar.gz"
-      sha256 "d3aa3c14ad8cc8f32c09cf700fb35eaccb4b0c78c6a5b3ef3ff52b76f1c84864"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sprisa/localhost/releases/download/v0.0.5/localhost_Linux_arm64.tar.gz"
+      sha256 "1323aa50a0e2b8333d019298f8d0b2ccfb1fc87fd3bd7bc9e11664e7ddb0edf3"
       def install
         bin.install "localhost"
       end
