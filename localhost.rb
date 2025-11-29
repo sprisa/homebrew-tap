@@ -5,21 +5,21 @@
 class Localhost < Formula
   desc "Local development certs (TLS) for https services on localhost"
   homepage "https://svc.host"
-  version "0.0.6"
+  version "1.0.0"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.6/localhost_Darwin_x86_64.tar.gz"
-      sha256 "bbeb63fcd231d945c13a887b1ca05001f5f2aadf6007227f30d0a553fb186db0"
+      url "https://github.com/sprisa/localhost/releases/download/v1.0.0/localhost_Darwin_x86_64.tar.gz"
+      sha256 "260f926f543a7c7d6c247e57cecd1f01d218320bad7287c3b383cc9344fc4b15"
 
       def install
         bin.install "localhost"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.6/localhost_Darwin_arm64.tar.gz"
-      sha256 "70a2b97b42a98e5ddf9852a2082b30d09a0ad7de59ce6a8ea7c462b3852c95e0"
+      url "https://github.com/sprisa/localhost/releases/download/v1.0.0/localhost_Darwin_arm64.tar.gz"
+      sha256 "0b70e79d1ae92877bb2bea204aa1c0f27da0d05f073aa2da0a57a96288cbd58a"
 
       def install
         bin.install "localhost"
@@ -29,15 +29,15 @@ class Localhost < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.6/localhost_Linux_x86_64.tar.gz"
-      sha256 "44caf5b15a17b575b95a3deddbbd7173aa5a6ebccd45fb0244f83ce62a3289e7"
+      url "https://github.com/sprisa/localhost/releases/download/v1.0.0/localhost_Linux_x86_64.tar.gz"
+      sha256 "7d9163ae1d38c9d9e19813eea549de298cb66b7de28163cb878b877e0d695a72"
       def install
         bin.install "localhost"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/localhost/releases/download/v0.0.6/localhost_Linux_arm64.tar.gz"
-      sha256 "736b80fb7b2a216c535d7499ff441daf29bfc371e2fca5dc2d433d63cfe23d6a"
+      url "https://github.com/sprisa/localhost/releases/download/v1.0.0/localhost_Linux_arm64.tar.gz"
+      sha256 "2ffe961af6fc73819f205ed32a818740286a14a0121a2e5f59ac5c3339e1bf79"
       def install
         bin.install "localhost"
       end
