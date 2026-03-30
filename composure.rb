@@ -5,21 +5,21 @@
 class Composure < Formula
   desc "Deploy docker-compose files to multiple hosts via SSH with Composure"
   homepage "https://github.com/sprisa/composure"
-  version "0.0.3"
+  version "0.0.4"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sprisa/composure/releases/download/v0.0.3/composure_Darwin_x86_64.tar.gz"
-      sha256 "2e459c1314a757632d0b4569482b51fe69cbc4027fb8dbc635419e10a3975913"
+      url "https://github.com/sprisa/composure/releases/download/v0.0.4/composure_Darwin_x86_64.tar.gz"
+      sha256 "299b1afd3c5e4bc29e148f0d9f981336a984eac3839836717605c32deb17e81d"
 
       define_method(:install) do
         bin.install "composure"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sprisa/composure/releases/download/v0.0.3/composure_Darwin_arm64.tar.gz"
-      sha256 "9969ff16eef5da9362ff3c2041e7ca3a3103d90f964e9ec08837b769333878c4"
+      url "https://github.com/sprisa/composure/releases/download/v0.0.4/composure_Darwin_arm64.tar.gz"
+      sha256 "a38982c716bea2018c5b097dc0c2585f7c355bde59125c55953545ca6ebc0464"
 
       define_method(:install) do
         bin.install "composure"
@@ -29,15 +29,15 @@ class Composure < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/composure/releases/download/v0.0.3/composure_Linux_x86_64.tar.gz"
-      sha256 "1faaddaadca2102b188eeb5bec2048c8e66b1d0952b21d3228650dd951c2f1ed"
+      url "https://github.com/sprisa/composure/releases/download/v0.0.4/composure_Linux_x86_64.tar.gz"
+      sha256 "f498c71065778c8bb4d001a1b1275878178966fee8eb5ea1c372e09b5e7d575d"
       define_method(:install) do
         bin.install "composure"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sprisa/composure/releases/download/v0.0.3/composure_Linux_arm64.tar.gz"
-      sha256 "d0a1155744679686ce4f8363678ef4aff6b91b83ec68bdeb39aeeb55c46cd178"
+      url "https://github.com/sprisa/composure/releases/download/v0.0.4/composure_Linux_arm64.tar.gz"
+      sha256 "e5aa05f5d53a88547d8b26e93d09d17100913618b2229c32cb8757833dfe7b12"
       define_method(:install) do
         bin.install "composure"
       end
