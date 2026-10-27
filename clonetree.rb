@@ -5,28 +5,28 @@
 class Clonetree < Formula
   desc "Copy-on-write snapshots of directories"
   homepage "https://github.com/sprisa/clonetree"
-  version "1.0.1"
+  version "1.1.0"
   license "MPL-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.0.1/clonetree_Darwin_arm64.tar.gz"
-      sha256 "f9d6e904c34a2dc6547ef3418c8591f093bf238b963c934bdb204a45dd9272d0"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.1.0/clonetree_Darwin_arm64.tar.gz"
+      sha256 "d95d7efd6851ae477a2474b767b032f0aa8237b5cab2589783711108db1e8f72"
     end
     on_intel do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.0.1/clonetree_Darwin_x86_64.tar.gz"
-      sha256 "1c6190ae33cd96315b5f6ebf16e158b240bdac878ed4ca03a836e8a27b23ccd3"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.1.0/clonetree_Darwin_x86_64.tar.gz"
+      sha256 "e9b102fed9976a08317284bacbc9529e15f28869c020a4caa1e19fc7e87a2fe0"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.0.1/clonetree_Linux_arm64.tar.gz"
-      sha256 "75eefceb66466b8d212d44580fa51bc7cf3f7be2b0c59430f0b98e1a7b26ff2a"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.1.0/clonetree_Linux_arm64.tar.gz"
+      sha256 "94ffb79fdeb915e93b45bcc09143482a1ff5587ad18851e7b9f1b89dc1f39c29"
     end
     on_intel do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.0.1/clonetree_Linux_x86_64.tar.gz"
-      sha256 "5138354276afd34a66f809f307dc520fbe0791b1927ac2a39638dff80c8bd595"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.1.0/clonetree_Linux_x86_64.tar.gz"
+      sha256 "f999ba438fbf04caf844ffb7e15bed5f4b91c3d1e62128bb80fc234a37c8e445"
     end
   end
 
