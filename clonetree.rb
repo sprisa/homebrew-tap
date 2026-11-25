@@ -5,41 +5,42 @@
 class Clonetree < Formula
   desc "Copy-on-write snapshots of directories"
   homepage "https://github.com/sprisa/clonetree"
-  version "1.1.2"
+  version "1.2.0"
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/sprisa/clonetree/releases/download/v1.1.2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "e640c584405304e1783a1d99acc1949f5e90ebfffe1e1bbde7b7299120e564f7"
-    sha256 cellar: :any_skip_relocation, ventura: "31f1c2c674c80d67186f3bea2f1a893bd10661a921802194c2744e7dd12c3819"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "e56a57c0927bc5321205f61a4f70d638e4d395fb6ac85f17ad4db267890e723f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d161d23dcb21e40e52a8f41f719ec6db96463130ead1dd724088cbf164da03d9"
+    root_url "https://github.com/sprisa/clonetree/releases/download/v1.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5b296cffd71951ccc34771ff506bfc8b94145b248d0f014ee816916cbf8dab8c"
+    sha256 cellar: :any_skip_relocation, ventura: "a4eecde78d9a89b8d6eb330539492f349ed1eb525dc7085ba5773b0a2deb693c"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "84b58ad702073f0b63becf8d6a38a8cc08a7eec283f005b712b0298d9018058a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2f79495e45bc1c17b8e8806731f6e7935560b43e6dd45870fd3c6c635fc213e0"
   end
 
   on_macos do
     on_arm do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.1.2/clonetree_Darwin_arm64.tar.gz"
-      sha256 "10165fd1bcbff35aab2b85f42da85a7be81682ffc46e5d2283a5fd5830dbb8e3"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.2.0/clonetree_Darwin_arm64.tar.gz"
+      sha256 "e66caec8dc1e401a22ae1b62ae10b264f3472ccb9c93307b562448e7324c3cf8"
     end
     on_intel do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.1.2/clonetree_Darwin_x86_64.tar.gz"
-      sha256 "15e0294ec4b292045df5e3ee1e7d0e54e396c5190d2ed135c6c0c50c425f9de9"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.2.0/clonetree_Darwin_x86_64.tar.gz"
+      sha256 "2e639671c703574953692eee17f07da8dedfeb55f7479b9725ff69e065838426"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.1.2/clonetree_Linux_arm64.tar.gz"
-      sha256 "7128423d3ea49f3185c463357e153485ca265ef2a3f8fa5b668aacff8aa027de"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.2.0/clonetree_Linux_arm64.tar.gz"
+      sha256 "4ee935019d07911c02d256a9f43ad22d94cb6533244fb35a126f96db140b75e3"
     end
     on_intel do
-      url "https://github.com/sprisa/clonetree/releases/download/v1.1.2/clonetree_Linux_x86_64.tar.gz"
-      sha256 "16f98ab9362ecb38813d921f1418faee20c7b35ed53805e23902e28b006e0d20"
+      url "https://github.com/sprisa/clonetree/releases/download/v1.2.0/clonetree_Linux_x86_64.tar.gz"
+      sha256 "b320a16a89211db1cfe488c7a1b4ae20c615417ce6bf57bfbd635457f1ac01c7"
     end
   end
 
   def install
     bin.install "clonetree"
+    generate_completions_from_executable(bin/"clonetree", "completion")
   end
 
   test do
